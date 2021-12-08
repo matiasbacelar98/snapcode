@@ -17,7 +17,7 @@ function App() {
       <Header spacing />
 
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home spacing />} />
         <Route path='mis-imagenes' element={<MyImages />} />
       </Routes>
 
