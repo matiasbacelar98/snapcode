@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { motion, AnimatePresence } from 'framer-motion';
-import { StyledNavMobile, StyledMobileUl } from './styles';
+import { StyledNavMobile, StyledMobileUl, StyledBtn } from './styles';
 import { useNavMobile } from './useNavMobile';
 import { useAuthContext } from '../../context/authContext';
 import UserAvatar from '../userAvatar/UserAvatar';
@@ -39,13 +39,13 @@ const NavMobile = ({ isMenuOpen }) => {
         </motion.li>
 
         <motion.li initial={liFrom} animate={liControls} custom={2} className='relative-parent'>
-          <button
+          <StyledBtn
             type='button'
             className='remove-default-button link-mobile'
             onClick={() => handleClick(user, setIsUserModal)}
           >
             {user ? <UserAvatar bigSize /> : 'Login/Registro'}
-          </button>
+          </StyledBtn>
 
           <AnimatePresence>
             {isUserModal ? <UserModal key='user-modal' setIsUserModal={setIsUserModal} /> : null}

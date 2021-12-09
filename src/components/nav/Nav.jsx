@@ -18,7 +18,7 @@ const Nav = () => {
           <NavLink
             to='/'
             className={linkRoute =>
-              linkRoute.isActive ? 'active-link link-desktop' : 'link-desktop'
+              linkRoute.isActive ? 'active-link link-desktop focus' : 'link-desktop focus'
             }
           >
             Home
@@ -29,7 +29,7 @@ const Nav = () => {
           <NavLink
             to='mis-imagenes'
             className={linkRoute =>
-              linkRoute.isActive ? 'active-link link-desktop' : 'link-desktop'
+              linkRoute.isActive ? 'active-link link-desktop focus' : 'link-desktop focus'
             }
           >
             Mis Imagenes
@@ -37,7 +37,11 @@ const Nav = () => {
         </li>
 
         <li className='relative-parent'>
-          <StyledBtn type='button' onClick={() => handleClick(user, setIsUserModal)}>
+          <StyledBtn
+            type='button'
+            onClick={() => handleClick(user, setIsUserModal)}
+            className='focus'
+          >
             {user ? <UserAvatar bigSize={false} /> : 'Login/Registro'}
           </StyledBtn>
 

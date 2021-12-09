@@ -22,7 +22,7 @@ const ActionBtn = ({ isAction, classGridItem, code, editorRef }) => {
         <StyledActionBtn
           type='button'
           onClick={() => handleCopyToClipboard(code)}
-          className={classGridItem}
+          className={`${classGridItem} focus`}
         >
           <AiOutlineCopy className='default-icon' />
         </StyledActionBtn>
@@ -34,7 +34,11 @@ const ActionBtn = ({ isAction, classGridItem, code, editorRef }) => {
   if (isAction === 'download') {
     return (
       <Tooltip tooltipData={downloadTooltip}>
-        <StyledActionBtn type='button' className={classGridItem} onClick={downloadCodeAsImg}>
+        <StyledActionBtn
+          type='button'
+          className={`${classGridItem} focus`}
+          onClick={downloadCodeAsImg}
+        >
           <BsDownload className='default-icon' />
         </StyledActionBtn>
       </Tooltip>
@@ -44,7 +48,7 @@ const ActionBtn = ({ isAction, classGridItem, code, editorRef }) => {
   /* Default is Save Btn */
   return (
     <Tooltip tooltipData={saveTooltip}>
-      <StyledActionBtn type='button' className={classGridItem} onClick={saveUserImg}>
+      <StyledActionBtn type='button' className={`${classGridItem} focus`} onClick={saveUserImg}>
         <AiOutlineSave className='default-icon' />
       </StyledActionBtn>
     </Tooltip>

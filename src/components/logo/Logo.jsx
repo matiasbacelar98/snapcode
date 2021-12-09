@@ -9,7 +9,7 @@ const StyledSvg = styled.svg`
 
 function Logo() {
   return (
-    <Link to='/'>
+    <Link to='/' className='focus'>
       <StyledSvg viewBox='0 0 63 66' fill='none' xmlns='http://www.w3.org/2000/svg'>
         <text
           id='logo'

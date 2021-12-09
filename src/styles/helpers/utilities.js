@@ -72,4 +72,12 @@ export const utilityClasses = css`
   .relative-parent {
     position: relative;
   }
+
+  .focus {
+    &:focus,
+    &:active {
+      border-color: var(--clr-primary-500);
+      outline: 0.5px solid var(--clr-primary-500);
+    }
+  }
 `;
