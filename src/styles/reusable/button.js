@@ -16,4 +16,10 @@ export const StyledActionBtn = styled.button`
     background-color: var(--clr-white-opacity);
     cursor: pointer;
   }
+
+  &:focus,
+  &:active {
+    border-color: var(--clr-primary-500);
+    outline: 0.5px solid var(--clr-primary-500);
+  }
 `;
