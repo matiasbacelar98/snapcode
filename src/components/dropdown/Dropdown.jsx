@@ -3,7 +3,7 @@ import { StyledSelect } from './styles';
 
 const Dropdown = ({ value, onChange, data, classGridItem }) => {
   return (
-    <StyledSelect defaultValue={value} onChange={onChange} className={`${classGridItem} focus`}>
+    <StyledSelect defaultValue={value} onChange={onChange} className={`${classGridItem} focus-bg`}>
       {data.sort().map(item => (
         <option key={item} value={item}>
           {item}

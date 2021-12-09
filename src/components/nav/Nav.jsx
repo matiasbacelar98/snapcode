@@ -18,7 +18,7 @@ const Nav = () => {
           <NavLink
             to='/'
             className={linkRoute =>
-              linkRoute.isActive ? 'active-link link-desktop focus' : 'link-desktop focus'
+              linkRoute.isActive ? 'active-link link-desktop focus-box' : 'link-desktop focus-box'
             }
           >
             Home
@@ -29,7 +29,7 @@ const Nav = () => {
           <NavLink
             to='mis-imagenes'
             className={linkRoute =>
-              linkRoute.isActive ? 'active-link link-desktop focus' : 'link-desktop focus'
+              linkRoute.isActive ? 'active-link link-desktop focus-box' : 'link-desktop focus-box'
             }
           >
             Mis Imagenes
@@ -40,7 +40,8 @@ const Nav = () => {
           <StyledBtn
             type='button'
             onClick={() => handleClick(user, setIsUserModal)}
-            className='focus'
+            className='focus-bg'
+            aria-label={user ? 'abrir modal' : 'login/registro'}
           >
             {user ? <UserAvatar bigSize={false} /> : 'Login/Registro'}
           </StyledBtn>

@@ -33,7 +33,8 @@ const ColorPicker = ({ classGridItem, color, setColor }) => {
         type='button'
         onClick={toggleColorPicker}
         aria-label={isColorPickerActive ? 'Cerrar selector de color' : 'Abrir selector de color'}
-        className='focus'
+        className='focus-bg'
+        name='elegir color'
       >
         <CgColorPicker className='default-icon' />
       </StyledActionBtn>
