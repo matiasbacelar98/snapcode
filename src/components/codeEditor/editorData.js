@@ -1,20 +1,12 @@
 const languagesOptions = [
   'javascript',
-  'cobol',
-  'coffeescript',
   'css',
   'dart',
   'django',
-  'dockerfile',
-  'fortran',
   'go',
-  'haskell',
   'jsx',
-  'lua',
   'markdown',
   'nginx',
-  'pascal',
-  'perl',
   'php',
   'powershell',
   'pug',
@@ -26,7 +18,7 @@ const languagesOptions = [
   'stylus',
   'swift',
   'vue',
-  'xml',
+  'html',
 ];
 
 const themesOptions = [
@@ -89,8 +81,6 @@ const themesOptions = [
   'xq-dark',
   'xq-light',
   'yeti',
-  'idea',
-  'darcula',
   'yonce',
   'zenburn',
 ];

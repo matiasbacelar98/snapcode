@@ -13,6 +13,12 @@ export const StyledSelect = styled.select`
     cursor: pointer;
   }
 
+  &:focus,
+  &:active {
+    border-color: var(--clr-primary-500);
+    outline: 0.5px solid var(--clr-primary-500);
+  }
+
   ${respondTo.md`
     text-align: left;
   `}

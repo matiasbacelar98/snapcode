@@ -1,13 +1,12 @@
 import PropTypes from 'prop-types';
-import { v4 as uuid } from 'uuid';
 import { StyledSelect } from './styles';
 
 const Dropdown = ({ value, onChange, data, classGridItem }) => {
   return (
-    <StyledSelect value={value} onChange={onChange} className={classGridItem}>
+    <StyledSelect defaultValue={value} onChange={onChange} className={classGridItem}>
       {data.sort().map(item => (
-        <option key={uuid()} value={item}>
-          {item === 'xml' ? 'html' : item}
+        <option key={item} value={item}>
+          {item}
         </option>
       ))}
     </StyledSelect>
