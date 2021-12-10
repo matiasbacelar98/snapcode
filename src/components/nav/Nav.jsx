@@ -4,7 +4,7 @@ import { AnimatePresence } from 'framer-motion';
 import { StyledNav, StyledUl, StyledBtn } from './styles';
 import UserAvatar from '../userAvatar/UserAvatar';
 import UserModal from '../userModal/UserModal';
-import { useCurrentRoute } from '../../hooks/useCurrentRoute';
+import { useCurrentRoute } from '../../hooks';
 import { useAuthContext } from '../../context/authContext';
 import { handleClick } from '../../utils/utilities';
 

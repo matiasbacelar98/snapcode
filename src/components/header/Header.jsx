@@ -19,7 +19,7 @@ const Header = ({ spacing }) => {
       </StyledFlexWrapper>
 
       {/* Mobile Nav */}
-      <NavMobile isMenuOpen={isMenuOpen} />
+      <NavMobile isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
     </header>
   );
 };
