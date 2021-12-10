@@ -82,6 +82,13 @@ export const utilityClasses = css`
     }
   }
 
+  .focus-clr {
+    &:focus,
+    &:active {
+      color: var(--clr-primary-500);
+    }
+  }
+
   .focus-bg {
     &:focus,
     &:active {

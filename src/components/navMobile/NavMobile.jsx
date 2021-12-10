@@ -20,7 +20,7 @@ const NavMobile = ({ isMenuOpen }) => {
           <NavLink
             to='/'
             className={linkRoute =>
-              linkRoute.isActive ? 'link-mobile focus-box active-link' : 'link-mobile focus-box'
+              linkRoute.isActive ? 'link-mobile focus-clr active-link' : 'link-mobile focus-clr'
             }
           >
             Home
@@ -31,7 +31,7 @@ const NavMobile = ({ isMenuOpen }) => {
           <NavLink
             to='mis-imagenes'
             className={linkRoute =>
-              linkRoute.isActive ? 'link-mobile focus-box active-link' : 'link-mobile focus-box'
+              linkRoute.isActive ? 'link-mobile focus-clr active-link' : 'link-mobile focus-clr'
             }
           >
             Mis imagenes
