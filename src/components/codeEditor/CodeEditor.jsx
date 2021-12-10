@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react';
 import { Controlled as ControlledEditor } from 'react-codemirror2';
 import { StyledEditorWrapper, StyledActionWrapper } from './styles';
+import { useLocalStorage } from '../../hooks';
 import Dropdown from '../dropdown/Dropdown';
 import ActionBtn from '../actionBtn/ActionBtn';
 import ColorPicker from '../colorPicker/ColorPicker';
@@ -19,7 +20,7 @@ import './languages/jsx';
 import './themes/monokai';
 
 const CodeEditor = () => {
-  const [code, setCode] = useState(defaultCode);
+  const [code, setCode] = useLocalStorage('code', defaultCode);
   const [language, setLanguage] = useState(defaultLanguage);
   const [theme, setTheme] = useState(defaultTheme);
   const [color, setColor] = useState(defaultColor);
