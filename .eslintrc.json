@@ -21,6 +21,8 @@
   },
   "plugins": ["react", "react-hooks", "prettier", "jsx-a11y"],
   "rules": {
+    "guard-for-in": "off",
+    "no-restricted-syntax": "off",
     "no-unused-vars": "warn",
     "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".jsx", ".js"] }],
     "react-hooks/rules-of-hooks": "error",

@@ -60,7 +60,6 @@ export const reset = css`
 
   /* Set core body defaults */
   body {
-    min-height: 100vh;
     line-height: var(--line-height-text);
     font-family: var(--font);
     background-color: var(--clr-bg);
