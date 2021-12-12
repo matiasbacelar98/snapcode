@@ -4,14 +4,9 @@
 
 ## Tabla de contenidos
 
-- [Screenshots](#screenshots)
 - [Tecnologias](#tecnologias)
 - [Inspiracion](#inspiracion)
 - [Contacto](#contacto)
-
-## Screenshots
-
-proximamente...
 
 ## Tecnologias
 
