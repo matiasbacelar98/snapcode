@@ -6,7 +6,7 @@ const signInWithGithub = async pathname => {
       provider: 'github',
     },
     {
-      redirectTo: `http://localhost:3000${pathname}`,
+      redirectTo: `${import.meta.env.VITE_APP_URL}${pathname}`,
     }
   );
 };
