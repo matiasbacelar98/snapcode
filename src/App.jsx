@@ -17,7 +17,7 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Home spacing />} />
-        <Route path='mis-imagenes' element={<MyImages />} />
+        <Route path='mis-imagenes' element={<MyImages spacing />} />
       </Routes>
     </>
   );

@@ -63,6 +63,17 @@ export const utilityClasses = css`
     background-color: transparent;
   }
 
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip-path: inset(100%);
+    overflow: hidden;
+  }
+
   .default-icon {
     color: var(--clr-white);
     width: 1.8rem;

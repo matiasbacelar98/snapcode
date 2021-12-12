@@ -1,13 +1,18 @@
-import { StyledWrapper } from './styles';
+import { StyledGridCenter } from '../../../styles/reusable/grid';
+import Loader from '../../../components/loader/Loader';
 import Footer from '../../../components/footer/Footer';
 
 const Loading = () => {
   return (
-    <StyledWrapper className='wrapper'>
-      <p className='center'>Cargando...</p>
+    <>
+      <main className='wrapper'>
+        <StyledGridCenter>
+          <Loader gridItem='center' />
+        </StyledGridCenter>
+      </main>
 
       <Footer spacing />
-    </StyledWrapper>
+    </>
   );
 };
 

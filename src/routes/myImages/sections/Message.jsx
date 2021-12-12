@@ -1,17 +1,25 @@
-import { StyledWrapper } from './styles';
+import PropTypes from 'prop-types';
+import { StyledGridCenter } from '../../../styles/reusable/grid';
 import { StyledMessage } from '../../../styles/reusable/typography';
 import Footer from '../../../components/footer/Footer';
 
-const Message = () => {
+const Message = ({ content }) => {
   return (
-    <StyledWrapper className='wrapper'>
-      <div className='center'>
-        <StyledMessage>Por favor inicie sesion para ver esta informacion</StyledMessage>
-      </div>
+    <>
+      <main className='wrapper'>
+        <StyledGridCenter>
+          <StyledMessage className='center'>{content}</StyledMessage>
+        </StyledGridCenter>
+      </main>
 
       <Footer spacing />
-    </StyledWrapper>
+    </>
   );
+};
+
+// Proptypes
+Message.propTypes = {
+  content: PropTypes.string.isRequired,
 };
 
 export default Message;
