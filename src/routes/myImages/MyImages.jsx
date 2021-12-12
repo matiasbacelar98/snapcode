@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet-async';
 import { supabase } from '../../supabase/supabase';
 import { useAuthContext } from '../../context/authContext';
 // Sections & Components
@@ -61,6 +62,14 @@ const MyImages = ({ spacing }) => {
 
   return (
     <>
+      <Helmet>
+        <title>Mis Imagenes</title>
+        <meta
+          name='description'
+          content='Descarga u borra los snippets de codigo que tengas guardados'
+        />
+      </Helmet>
+
       <main className={`wrapper flow-spacing-1 ${spacing ? 'spacing-top' : ''}`}>
         <h1 className='visually-hidden'>Mis Imagenes</h1>
 
