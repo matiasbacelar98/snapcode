@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { StyledWrapper, StyledBtn } from './styles';
+import { StyledWrapper } from './styles';
 import { userModalAnimations } from './animations';
 import { useClickOutside } from '../../hooks';
 import { signOutUser } from '../../utils/utilities';
@@ -28,12 +28,17 @@ const UserModal = ({ setIsUserModal }) => {
       exit={userModalExit()}
       ref={userModalRef}
     >
-      <Link to='/mis-imagenes' className='flex-item'>
+      <Link to='/mis-imagenes' className='flex-item focus-bg'>
         Mis Imagenes
       </Link>
-      <StyledBtn type='button' onClick={handleSignOut} className='remove-default-button flex-item'>
+      <button
+        type='button'
+        onClick={handleSignOut}
+        className='remove-default-button focus-bg flex-item'
+        name='cerrar sesion'
+      >
         Cerrar Sesion
-      </StyledBtn>
+      </button>
     </StyledWrapper>
   );
 };

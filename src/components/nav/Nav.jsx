@@ -4,12 +4,14 @@ import { AnimatePresence } from 'framer-motion';
 import { StyledNav, StyledUl, StyledBtn } from './styles';
 import UserAvatar from '../userAvatar/UserAvatar';
 import UserModal from '../userModal/UserModal';
+import { useCurrentRoute } from '../../hooks';
 import { useAuthContext } from '../../context/authContext';
 import { handleClick } from '../../utils/utilities';
 
 const Nav = () => {
   const [isUserModal, setIsUserModal] = useState(false);
   const { user } = useAuthContext();
+  const currentRoutePathname = useCurrentRoute();
 
   return (
     <StyledNav>
@@ -18,7 +20,7 @@ const Nav = () => {
           <NavLink
             to='/'
             className={linkRoute =>
-              linkRoute.isActive ? 'active-link link-desktop focus' : 'link-desktop focus'
+              linkRoute.isActive ? 'active-link link-desktop focus-clr' : 'link-desktop focus-clr'
             }
           >
             Home
@@ -29,7 +31,7 @@ const Nav = () => {
           <NavLink
             to='mis-imagenes'
             className={linkRoute =>
-              linkRoute.isActive ? 'active-link link-desktop focus' : 'link-desktop focus'
+              linkRoute.isActive ? 'active-link link-desktop focus-clr' : 'link-desktop focus-clr'
             }
           >
             Mis Imagenes
@@ -39,8 +41,9 @@ const Nav = () => {
         <li className='relative-parent'>
           <StyledBtn
             type='button'
-            onClick={() => handleClick(user, setIsUserModal)}
-            className='focus'
+            onClick={() => handleClick(user, setIsUserModal, currentRoutePathname)}
+            className='focus-bg'
+            aria-label={user ? 'abrir modal' : 'login/registro'}
           >
             {user ? <UserAvatar bigSize={false} /> : 'Login/Registro'}
           </StyledBtn>

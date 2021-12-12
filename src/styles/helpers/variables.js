@@ -7,7 +7,7 @@ export const variables = css`
     --font: 'Mulish', sans-serif;
     --font-editor: 'Fira Code', monospace;
     --fs-1: ${fluidValues(280, 1400, 40, 96)};
-    --fs-2: ${fluidValues(280, 1400, 32, 48)};
+    --fs-2: ${fluidValues(280, 1400, 29, 40)};
     --fs-text-big: ${fluidValues(280, 1400, 16, 20)};
     --fs-mobile-links: ${fluidValues(280, 600, 32, 40)};
     --fs-text: 1rem;

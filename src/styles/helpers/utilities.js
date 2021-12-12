@@ -63,6 +63,17 @@ export const utilityClasses = css`
     background-color: transparent;
   }
 
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip-path: inset(100%);
+    overflow: hidden;
+  }
+
   .default-icon {
     color: var(--clr-white);
     width: 1.8rem;
@@ -73,11 +84,27 @@ export const utilityClasses = css`
     position: relative;
   }
 
-  .focus {
+  .focus-box {
     &:focus,
     &:active {
       border-color: var(--clr-primary-500);
       outline: 0.5px solid var(--clr-primary-500);
+      border-radius: var(--border-radius);
+    }
+  }
+
+  .focus-clr {
+    &:focus,
+    &:active {
+      color: var(--clr-primary-500);
+    }
+  }
+
+  .focus-bg {
+    &:focus,
+    &:active {
+      background-color: var(--clr-white-opacity);
+      outline: 2px solid transparent;
     }
   }
 `;

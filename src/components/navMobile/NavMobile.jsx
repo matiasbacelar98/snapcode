@@ -1,17 +1,19 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { motion, AnimatePresence } from 'framer-motion';
-import { StyledNavMobile, StyledMobileUl, StyledBtn } from './styles';
+import { StyledNavMobile, StyledMobileUl } from './styles';
 import { useNavMobile } from './useNavMobile';
 import { useAuthContext } from '../../context/authContext';
 import UserAvatar from '../userAvatar/UserAvatar';
 import UserModal from '../userModal/UserModal';
+import { useCurrentRoute } from '../../hooks';
 
-const NavMobile = ({ isMenuOpen }) => {
+const NavMobile = ({ isMenuOpen, setIsMenuOpen }) => {
   const [isUserModal, setIsUserModal] = useState(false);
   const { user } = useAuthContext();
-  const { NavLink, navControls, navFrom, liControls, liFrom, handleClick } =
-    useNavMobile(isMenuOpen);
+  const currentRoutePathname = useCurrentRoute();
+  const { NavLink, navControls, navFrom, liControls, liFrom, handleClick, closeMenuOnClick } =
+    useNavMobile(isMenuOpen, setIsMenuOpen);
 
   return (
     <StyledNavMobile initial={navFrom} animate={navControls}>
@@ -20,8 +22,9 @@ const NavMobile = ({ isMenuOpen }) => {
           <NavLink
             to='/'
             className={linkRoute =>
-              linkRoute.isActive ? 'link-mobile active-link' : 'link-mobile'
+              linkRoute.isActive ? 'link-mobile focus-clr active-link' : 'link-mobile focus-clr'
             }
+            onClick={closeMenuOnClick}
           >
             Home
           </NavLink>
@@ -31,21 +34,23 @@ const NavMobile = ({ isMenuOpen }) => {
           <NavLink
             to='mis-imagenes'
             className={linkRoute =>
-              linkRoute.isActive ? 'link-mobile active-link' : 'link-mobile'
+              linkRoute.isActive ? 'link-mobile focus-clr active-link' : 'link-mobile focus-clr'
             }
+            onClick={closeMenuOnClick}
           >
             Mis imagenes
           </NavLink>
         </motion.li>
 
         <motion.li initial={liFrom} animate={liControls} custom={2} className='relative-parent'>
-          <StyledBtn
+          <button
             type='button'
-            className='remove-default-button link-mobile'
-            onClick={() => handleClick(user, setIsUserModal)}
+            className='remove-default-button focus-box link-mobile'
+            onClick={() => handleClick(user, setIsUserModal, currentRoutePathname)}
+            aria-label={user ? 'abrir modal' : 'login/registro'}
           >
             {user ? <UserAvatar bigSize /> : 'Login/Registro'}
-          </StyledBtn>
+          </button>
 
           <AnimatePresence>
             {isUserModal ? <UserModal key='user-modal' setIsUserModal={setIsUserModal} /> : null}
@@ -59,10 +64,12 @@ const NavMobile = ({ isMenuOpen }) => {
 // Proptypes
 NavMobile.propTypes = {
   isMenuOpen: PropTypes.bool,
+  setIsMenuOpen: PropTypes.func,
 };
 
 NavMobile.defaultProps = {
   isMenuOpen: null,
+  setIsMenuOpen: null,
 };
 
 export default NavMobile;

@@ -4,7 +4,6 @@ import GlobalStyles from './styles/globalStyles';
 import Home from './routes/home/Home';
 import MyImages from './routes/myImages/MyImages';
 import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
 
 function App() {
   // Get scrollbarWidth of current browser
@@ -18,10 +17,8 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Home spacing />} />
-        <Route path='mis-imagenes' element={<MyImages />} />
+        <Route path='mis-imagenes' element={<MyImages spacing />} />
       </Routes>
-
-      <Footer spacing />
     </>
   );
 }

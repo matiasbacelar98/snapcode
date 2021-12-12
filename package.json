@@ -23,7 +23,6 @@
     "react-icons": "^4.3.1",
     "react-router-dom": "^6.0.2",
     "react-scrollbar-size": "^4.0.0",
-    "react-useanimations": "^2.0.6",
     "styled-components": "^5.3.3",
     "uuid": "^8.3.2"
   },

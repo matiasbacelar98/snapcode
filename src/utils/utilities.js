@@ -1,9 +1,14 @@
 import { supabase } from '../supabase/supabase';
 
-const signInWithGithub = async () => {
-  await supabase.auth.signIn({
-    provider: 'github',
-  });
+const signInWithGithub = async pathname => {
+  await supabase.auth.signIn(
+    {
+      provider: 'github',
+    },
+    {
+      redirectTo: `http://localhost:3000${pathname}`,
+    }
+  );
 };
 
 const signOutUser = async () => {
@@ -14,10 +19,10 @@ const removeScrollbar = () => {
   document.body.classList.toggle('remove-scroll');
 };
 
-const handleClick = (user, setState) => {
+const handleClick = (user, setState, pathname) => {
   // Login user
   if (user === null) {
-    signInWithGithub();
+    signInWithGithub(pathname);
   }
 
   if (user) {

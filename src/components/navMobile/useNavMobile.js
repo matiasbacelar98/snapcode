@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { navAnimations, liAnimations } from './animations';
 import { removeScrollbar, handleClick } from '../../utils/utilities';
 
-export const useNavMobile = isMenuOpen => {
+export const useNavMobile = (isMenuOpen, setIsMenuOpen) => {
   const navControls = useAnimation();
   const liControls = useAnimation();
   const { navFrom, navTo } = navAnimations;
@@ -22,6 +22,10 @@ export const useNavMobile = isMenuOpen => {
     liControls.start(liTo);
   }, [liControls, navControls, liTo, navTo]);
 
+  const closeMenuOnClick = () => {
+    setIsMenuOpen(false);
+  };
+
   // Check menuState and execute
   useEffect(() => {
     if (isMenuOpen === null) return;
@@ -35,5 +39,5 @@ export const useNavMobile = isMenuOpen => {
     }
   }, [isMenuOpen, animateMenuOut, animateMenuIn]);
 
-  return { NavLink, navControls, navFrom, liControls, liFrom, handleClick };
+  return { NavLink, navControls, navFrom, liControls, liFrom, handleClick, closeMenuOnClick };
 };

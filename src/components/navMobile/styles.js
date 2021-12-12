@@ -24,12 +24,4 @@ const StyledMobileUl = styled(motion.ul)`
   }
 `;
 
-const StyledBtn = styled.button`
-  &:focus,
-  &:active {
-    border-color: var(--clr-primary-500);
-    outline: 0.5px solid var(--clr-primary-500);
-  }
-`;
-
-export { StyledNavMobile, StyledMobileUl, StyledBtn };
+export { StyledNavMobile, StyledMobileUl };

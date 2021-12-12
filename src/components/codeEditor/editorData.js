@@ -103,7 +103,6 @@ export function useDebounce(value, delay) {
 
   return debouncedValue;
 }`;
-
 const defaultColor = '#f66f6f';
 const defaultTheme = 'monokai';
 const defaultLanguage = 'jsx';

@@ -48,4 +48,12 @@ const StyledActionWrapper = styled.div`
   `}
 `;
 
-export { StyledEditorWrapper, StyledActionWrapper };
+const StyledLoadingWrapper = styled.div`
+  min-height: 50vh;
+  max-width: 68.75rem; // 1100px
+  margin-inline: auto;
+  display: grid;
+  place-items: center;
+`;
+
+export { StyledEditorWrapper, StyledActionWrapper, StyledLoadingWrapper };
