@@ -3,6 +3,7 @@ import useScrollbarSize from 'react-scrollbar-size';
 import GlobalStyles from './styles/globalStyles';
 import Home from './routes/home/Home';
 import MyImages from './routes/myImages/MyImages';
+import Error from './routes/error/Error';
 import Header from './components/header/Header';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home spacing />} />
         <Route path='mis-imagenes' element={<MyImages spacing />} />
+        <Route path='*' element={<Error />} />
       </Routes>
     </>
   );

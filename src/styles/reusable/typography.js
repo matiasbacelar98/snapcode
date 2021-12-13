@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledH1 = styled.h1`
-  font-size: var(--fs-1);
+  font-size: ${props => (props.error ? 'var(--fs-404)' : 'var(--fs-1)')};
   font-weight: 700;
   letter-spacing: 0.375rem; // 6px
   user-select: none;
