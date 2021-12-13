@@ -34,7 +34,7 @@ const MyImages = ({ spacing }) => {
       data.map(async obj => {
         const { errorUrl, signedURL } = await supabase.storage
           .from('snippets')
-          .createSignedUrl(`${user.user.id}/${obj.name}`, 3600);
+          .createSignedUrl(`${user.user.id}/${obj.name}`, 604800);
 
         // if error doesnt exists is undefined
         setError(errorUrl);
