@@ -1,6 +1,5 @@
 import { useRef } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import { StyledWrapper } from './styles';
 import { userModalAnimations } from './animations';
 import { useClickOutside } from '../../hooks';
@@ -28,9 +27,14 @@ const UserModal = ({ setIsUserModal }) => {
       exit={userModalExit()}
       ref={userModalRef}
     >
-      <Link to='/mis-imagenes' className='flex-item focus-bg'>
-        Mis Imagenes
-      </Link>
+      <a
+        href='https://github.com/matiasbacelar98/snapcode'
+        target='_blank'
+        className='flex-item focus-bg'
+        rel='noreferrer'
+      >
+        Repositorio
+      </a>
       <button
         type='button'
         onClick={handleSignOut}
