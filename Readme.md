@@ -2,6 +2,24 @@
 
 > Snapcode es una aplicacion para crear snippets de codigo , descargarlos , guardarlos y borrarlos usando github como provider de autenticacion & supabase.
 
+## Scripts
+
+En el directorio del proyecto, puede ejecutar:
+
+
+### `npm run dev`
+
+Para ejecutar la aplicacion en modo desarrollo.\
+Abrir [http://localhost:3000](http://localhost:3000) para ver la aplicacion en el navegador.
+
+La pagina se va a recargar cuando ocurran cambios.\
+Tambien se van a mostrar errores en la consola.
+
+
+### `npm run build`
+
+Construye la aplicacion en modo produccion , va a generar una carpeta bajo el nombre de `dist`.
+
 ## Tabla de contenidos
 
 - [Screenshots](#screenshots)
