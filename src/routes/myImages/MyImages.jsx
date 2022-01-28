@@ -63,7 +63,7 @@ const MyImages = ({ spacing }) => {
   return (
     <>
       <Helmet>
-        <title>Mis Imagenes</title>
+        <title>Mis Imágenes</title>
         <meta
           name='description'
           content='Descarga u borra los snippets de codigo que tengas guardados'
@@ -71,7 +71,7 @@ const MyImages = ({ spacing }) => {
       </Helmet>
 
       <main className={`wrapper flow-spacing-1 ${spacing ? 'spacing-top' : ''}`}>
-        <h1 className='visually-hidden'>Mis Imagenes</h1>
+        <h1 className='visually-hidden'>Mis Imágenes</h1>
 
         <UserImages userImages={userImages} setUserImages={setUserImages} />
       </main>
