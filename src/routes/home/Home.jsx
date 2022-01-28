@@ -20,8 +20,8 @@ const Home = ({ spacing }) => {
         <StyledIntro className='flow-spacing-2'>
           <StyledH1>Snapcode</StyledH1>
           <p className='parragraph'>
-            Elegi un lenguaje de programacion , un tema de tu preferencia y escribi el codigo en el
-            editor , descargalo como imagen y compartirlo con otros programadores.
+            Elegí un lenguaje de programación , un tema de tu preferencia y escribí el código en el
+            editor , descárgalo como imagen y compartirlo con otros programadores.
           </p>
         </StyledIntro>
 

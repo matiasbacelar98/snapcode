@@ -38,7 +38,7 @@ const NavMobile = ({ isMenuOpen, setIsMenuOpen }) => {
             }
             onClick={closeMenuOnClick}
           >
-            Mis imagenes
+            Mis Imágenes
           </NavLink>
         </motion.li>
 

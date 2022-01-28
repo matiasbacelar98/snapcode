@@ -34,7 +34,7 @@ const Nav = () => {
               linkRoute.isActive ? 'active-link link-desktop focus-clr' : 'link-desktop focus-clr'
             }
           >
-            Mis Imagenes
+            Mis Imágenes
           </NavLink>
         </li>
 

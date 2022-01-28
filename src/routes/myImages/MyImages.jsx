@@ -49,7 +49,7 @@ const MyImages = ({ spacing }) => {
   }, [user]);
 
   if (!user) {
-    return <Message content='Por favor inicie sesion para ver esta informacion' />;
+    return <Message content='Por favor inicie sesión para ver esta información' />;
   }
 
   if (loading) {
