@@ -51,4 +51,4 @@ Este proyecto esta inspirado en la aplicacion [carbon](https://carbon.now.sh/)
 
 ## Contacto
 
-Creado por [@matiasbacelar](https://github.com/matiasbacelar98)
+Creado y diseñado por [@matiasbacelar](https://github.com/matiasbacelar98)
