@@ -1,31 +1,30 @@
 # Snapcode
 
-> Snapcode es una aplicacion para crear snippets de codigo , descargarlos , guardarlos y borrarlos usando github como provider de autenticacion & supabase.
+> Snapcode is an application to create code snippets, download, save and delete them using github as authentication provider & supabase.
 
 ## Scripts
 
-En el directorio del proyecto, puede ejecutar:
-
+In the project directory, you can run:
 
 ### `npm run dev`
 
-Para ejecutar la aplicacion en modo desarrollo.\
-Abrir [http://localhost:3000](http://localhost:3000) para ver la aplicacion en el navegador.
+To run the application in development mode.\
+Open [http://localhost:3000](http://localhost:3000) to see the application in the browser.
 
-La pagina se va a recargar cuando ocurran cambios.\
-Tambien se van a mostrar errores en la consola.
+The page will reload when changes occur.\
+Errors will also be displayed on the console.
 
 
 ### `npm run build`
 
-Construye la aplicacion en modo produccion , va a generar una carpeta bajo el nombre de `dist`.
+Build the application in production mode, it will create a folder named `dist`.
 
-## Tabla de contenidos
+## Contents
 
 - [Screenshots](#screenshots)
-- [Tecnologias](#tecnologias)
-- [Inspiracion](#inspiracion)
-- [Contacto](#contacto)
+- [Technologies](#technologies)
+- [Inspiration](#inspiration)
+- [Contact](#contact)
 
 ## Screenshots
 
@@ -35,7 +34,7 @@ Construye la aplicacion en modo produccion , va a generar una carpeta bajo el no
 <br />
 ![Mis Imagenes](https://user-images.githubusercontent.com/64114079/145753435-0ac078e0-53bc-4087-af78-1478ae2b388f.png)
 
-## Tecnologias
+## Technologies
 
 - Vite JS
 - React JS
@@ -45,10 +44,10 @@ Construye la aplicacion en modo produccion , va a generar una carpeta bajo el no
 - Supabase
 - Codemirror
 
-## Inspiracion
+## Inspiration
 
-Este proyecto esta inspirado en la aplicacion [carbon](https://carbon.now.sh/)
+This project is inspired by the [carbon](https://carbon.now.sh/) application 
 
-## Contacto
+## Contact
 
-Creado y diseñado por [@matiasbacelar](https://github.com/matiasbacelar98)
+Created and designed by [@matiasbacelar](https://github.com/matiasbacelar98)
